@@ -37,7 +37,10 @@ Evaluated on 2,844 labelled flows across six captures:
   is the concrete reason for combining the two approaches.
 
 Full numbers, confusion matrices and failure analysis: [`results/evaluation.json`](results/evaluation.json)
-and [`docs/REPORT.md`](docs/REPORT.md).
+and [`docs/REPORT.pdf`](docs/REPORT.pdf) (7-page technical report, 1,898 words).
+
+New to the project? [`docs/RUNBOOK.md`](docs/RUNBOOK.md) walks every command
+with the exact output you should expect.
 
 ---
 
@@ -218,9 +221,15 @@ megaminds-ids/
 ├── models/hybrid_model.joblib
 ├── results/                  # evaluation.json + charts + per-scenario exports
 ├── tests/                    # 34 unit + integration tests
+├── tools/
+│   ├── build_report_pdf.py   # REPORT.md -> REPORT.pdf (pandoc + xelatex)
+│   └── wordcount.py          # report length check (1,500-2,000 words)
 └── docs/
-    ├── REPORT.md             # technical report
-    └── VIDEO_DEMO_GUIDE.md   # shot-by-shot recording script
+    ├── REPORT.md             # technical report (source)
+    ├── REPORT.pdf            # technical report (typeset, 7 pages)
+    ├── RUNBOOK.md            # exact step-by-step commands + expected output
+    ├── VIDEO_DEMO_GUIDE.md   # shot-by-shot recording script
+    └── VIDEO_SCRIPT.md       # spoken narration for the video
 ```
 
 ---

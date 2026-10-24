@@ -1,0 +1,92 @@
+% ---------------------------------------------------------------------------
+% LaTeX preamble additions for the technical report.
+% Loaded by tools/build_report_pdf.py via pandoc --include-in-header.
+% ---------------------------------------------------------------------------
+
+\usepackage{fontspec}
+\usepackage{newunicodechar}
+\usepackage{xcolor}
+\usepackage{etoolbox}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{fancyvrb}
+
+% ---- Palette --------------------------------------------------------------
+\definecolor{accent}{HTML}{1F3864}
+\definecolor{accentrule}{HTML}{2E5496}
+\definecolor{muted}{HTML}{595959}
+\definecolor{rulegrey}{HTML}{C9C9C9}
+
+% ---- Typography -----------------------------------------------------------
+\setmainfont{Cambria}
+\setsansfont{Segoe UI}
+\setmonofont{Consolas}[Scale=0.84]
+
+% Glyphs that appear in the report but are not in every font.
+\newunicodechar{₂}{\textsubscript{2}}
+\newunicodechar{≈}{\ensuremath{\approx}}
+\newunicodechar{≤}{\ensuremath{\leq}}
+\newunicodechar{≥}{\ensuremath{\geq}}
+\newunicodechar{→}{\ensuremath{\rightarrow}}
+\newunicodechar{←}{\ensuremath{\leftarrow}}
+\newunicodechar{×}{\ensuremath{\times}}
+\newunicodechar{·}{\ensuremath{\cdot}}
+\newunicodechar{−}{\ensuremath{-}}
+
+% ---- Spacing --------------------------------------------------------------
+\linespread{1.06}
+\setlength{\parskip}{0.42em}
+\setlength{\parindent}{0pt}
+\renewcommand{\arraystretch}{1.18}
+
+% ---- Headings -------------------------------------------------------------
+\titleformat{\section}
+  {\sffamily\Large\bfseries\color{accent}}{\thesection}{0.7em}{}
+  [\vspace{-0.35em}{\color{accentrule}\rule{\linewidth}{0.6pt}}]
+\titleformat{\subsection}
+  {\sffamily\large\bfseries\color{accent}}{\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}
+  {\sffamily\normalsize\bfseries\color{accent}}{}{0em}{}
+\titlespacing*{\section}{0pt}{1.5em}{0.7em}
+\titlespacing*{\subsection}{0pt}{1.1em}{0.45em}
+
+% ---- Page furniture -------------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyhead[L]{\footnotesize\sffamily\color{muted}AI-Driven Network Traffic Analysis \& IDS}
+\fancyhead[R]{\footnotesize\sffamily\color{muted}Technical Report}
+\fancyfoot[C]{\footnotesize\sffamily\color{muted}\thepage}
+
+% ---- Tables ---------------------------------------------------------------
+\AtBeginEnvironment{longtable}{%
+  \footnotesize
+  \setlength{\tabcolsep}{4.5pt}%
+}
+\setlength{\LTcapwidth}{\linewidth}
+
+% ---- Lists ----------------------------------------------------------------
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.15em,topsep=0.35em}
+\setlist[enumerate]{leftmargin=1.6em,itemsep=0.15em,topsep=0.35em}
+
+% ---- Links ----------------------------------------------------------------
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=accent,
+  urlcolor=accent,
+  citecolor=accent,
+  pdftitle={AI-Driven Network Traffic Analysis and Intrusion Detection System},
+  pdfauthor={Ifrah Hasware},
+  pdfsubject={Technical Report - MegaMinds IT Services},
+  pdfkeywords={intrusion detection, network security, machine learning, explainability}
+}
+
+% ---- Verbatim / code ------------------------------------------------------
+\RecustomVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\footnotesize}

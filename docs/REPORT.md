@@ -91,16 +91,23 @@ The pipeline is a linear sequence of pure functions, which keeps each stage
 independently testable:
 
 ```
-pcap ──► parse ──► flow reconstruction ──► feature matrix ──┐
-                                                            ├─► rule layer ──┐
-                                                            └─► ML layer ────┤
-                                                                             ▼
-                                                     fusion & severity scoring
-                                                                             │
-                                        ┌────────────────────────────────────┤
-                                        ▼                                    ▼
-                              explainable incidents                JSON / CSV / charts
-                              (console + dashboard)
+pcap --> parse --> flow reconstruction --> feature matrix
+                                                |
+                        +-----------------------+-----------------------+
+                        |                                               |
+                        v                                               v
+                  rule layer                                        ML layer
+                        |                                               |
+                        +-----------------------+-----------------------+
+                                                |
+                                                v
+                                  fusion & severity scoring
+                                                |
+                        +-----------------------+-----------------------+
+                        |                                               |
+                        v                                               v
+          explainable incidents                              JSON / CSV / charts
+          (console + dashboard)
 ```
 
 Capture parsing streams frames with `PcapReader` so memory stays flat, then
