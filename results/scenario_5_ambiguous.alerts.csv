@@ -1,0 +1,3 @@
+alert_id,time_utc,category,severity,confidence,rule_id,rule_name,src_ip,dst_ip,dst_port,proto,flow_count,layers,ml_if,ml_rf,ground_truth
+A-0001,2025-01-01 00:00:20,port_scan,CRITICAL,0.981,R-001,VERTICAL_PORT_SCAN,10.0.0.200,10.0.0.10,1,TCP,40,signature+ml,0.773,0.998,benign
+A-0002,2025-01-01 00:00:30,port_scan,MEDIUM,0.722,ML-001,ML_DETECTION,10.0.0.77,10.0.0.10,1,TCP,25,ml,0.744,0.943,port_scan

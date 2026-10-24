@@ -1,0 +1,4 @@
+alert_id,time_utc,category,severity,confidence,rule_id,rule_name,src_ip,dst_ip,dst_port,proto,flow_count,layers,ml_if,ml_rf,ground_truth
+A-0001,2025-01-01 00:00:20,port_scan,CRITICAL,0.99,R-001,VERTICAL_PORT_SCAN,10.0.0.66,10.0.0.10,1,TCP,120,signature+ml,0.786,0.998,port_scan
+A-0002,2025-01-01 00:00:45,port_scan,CRITICAL,0.982,R-002,HORIZONTAL_PORT_SCAN,10.0.0.66,10.0.0.100,80,TCP,40,signature+ml,0.742,0.97,port_scan
+A-0003,2025-01-01 00:01:10,port_scan,HIGH,0.88,R-008,NULL_SCAN,10.0.0.66,10.0.0.10,21,TCP,12,signature+ml,0.747,1.0,port_scan

@@ -1,0 +1,744 @@
+{
+  "generated_at": "2026-10-24T17:16:48+00:00",
+  "totals": {
+    "flows": 2844,
+    "benign_flows": 415,
+    "attack_flows": 2429,
+    "pcaps": 6,
+    "alerts": 12
+  },
+  "overall": {
+    "signature": {
+      "tp": 2403,
+      "fp": 40,
+      "tn": 375,
+      "fn": 26,
+      "precision": 0.9836,
+      "recall": 0.9893,
+      "f1": 0.9865,
+      "accuracy": 0.9768,
+      "false_positive_rate": 0.0964,
+      "false_negative_rate": 0.0107,
+      "specificity": 0.9036
+    },
+    "ml": {
+      "tp": 2411,
+      "fp": 41,
+      "tn": 374,
+      "fn": 18,
+      "precision": 0.9833,
+      "recall": 0.9926,
+      "f1": 0.9879,
+      "accuracy": 0.9793,
+      "false_positive_rate": 0.0988,
+      "false_negative_rate": 0.0074,
+      "specificity": 0.9012
+    },
+    "hybrid": {
+      "tp": 2428,
+      "fp": 40,
+      "tn": 375,
+      "fn": 1,
+      "precision": 0.9838,
+      "recall": 0.9996,
+      "f1": 0.9916,
+      "accuracy": 0.9856,
+      "false_positive_rate": 0.0964,
+      "false_negative_rate": 0.0004,
+      "specificity": 0.9036
+    }
+  },
+  "overall_excluding_layer2": {
+    "signature": {
+      "tp": 2403,
+      "fp": 40,
+      "tn": 375,
+      "fn": 25,
+      "precision": 0.9836,
+      "recall": 0.9897,
+      "f1": 0.9867,
+      "accuracy": 0.9771,
+      "false_positive_rate": 0.0964,
+      "false_negative_rate": 0.0103,
+      "specificity": 0.9036
+    },
+    "ml": {
+      "tp": 2410,
+      "fp": 41,
+      "tn": 374,
+      "fn": 18,
+      "precision": 0.9833,
+      "recall": 0.9926,
+      "f1": 0.9879,
+      "accuracy": 0.9792,
+      "false_positive_rate": 0.0988,
+      "false_negative_rate": 0.0074,
+      "specificity": 0.9012
+    },
+    "hybrid": {
+      "tp": 2428,
+      "fp": 40,
+      "tn": 375,
+      "fn": 0,
+      "precision": 0.9838,
+      "recall": 1.0,
+      "f1": 0.9918,
+      "accuracy": 0.9859,
+      "false_positive_rate": 0.0964,
+      "false_negative_rate": 0.0,
+      "specificity": 0.9036
+    }
+  },
+  "holdout_only": {
+    "signature": {
+      "tp": 0,
+      "fp": 40,
+      "tn": 117,
+      "fn": 26,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "accuracy": 0.6393,
+      "false_positive_rate": 0.2548,
+      "false_negative_rate": 1.0,
+      "specificity": 0.7452
+    },
+    "ml": {
+      "tp": 26,
+      "fp": 41,
+      "tn": 116,
+      "fn": 0,
+      "precision": 0.3881,
+      "recall": 1.0,
+      "f1": 0.5591,
+      "accuracy": 0.776,
+      "false_positive_rate": 0.2611,
+      "false_negative_rate": 0.0,
+      "specificity": 0.7389
+    },
+    "hybrid": {
+      "tp": 25,
+      "fp": 40,
+      "tn": 117,
+      "fn": 1,
+      "precision": 0.3846,
+      "recall": 0.9615,
+      "f1": 0.5495,
+      "accuracy": 0.776,
+      "false_positive_rate": 0.2548,
+      "false_negative_rate": 0.0385,
+      "specificity": 0.7452
+    }
+  },
+  "per_scenario": [
+    {
+      "scenario": "scenario_1_benign",
+      "flows": 71,
+      "benign_flows": 71,
+      "attack_flows": 0,
+      "alerts": 0,
+      "alert_precision": 0.0,
+      "layers": {
+        "signature": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 71,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "accuracy": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "specificity": 1.0
+        },
+        "ml": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 71,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "accuracy": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "specificity": 1.0
+        },
+        "hybrid": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 71,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "accuracy": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "specificity": 1.0
+        }
+      }
+    },
+    {
+      "scenario": "scenario_2_port_scan",
+      "flows": 243,
+      "benign_flows": 71,
+      "attack_flows": 172,
+      "alerts": 3,
+      "alert_precision": 1.0,
+      "layers": {
+        "signature": {
+          "tp": 172,
+          "fp": 0,
+          "tn": 71,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "specificity": 1.0
+        },
+        "ml": {
+          "tp": 172,
+          "fp": 0,
+          "tn": 71,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "specificity": 1.0
+        },
+        "hybrid": {
+          "tp": 172,
+          "fp": 0,
+          "tn": 71,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "specificity": 1.0
+        }
+      }
+    },
+    {
+      "scenario": "scenario_3_dos",
+      "flows": 2257,
+      "benign_flows": 56,
+      "attack_flows": 2201,
+      "alerts": 3,
+      "alert_precision": 1.0,
+      "layers": {
+        "signature": {
+          "tp": 2201,
+          "fp": 0,
+          "tn": 56,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "specificity": 1.0
+        },
+        "ml": {
+          "tp": 2201,
+          "fp": 0,
+          "tn": 56,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "specificity": 1.0
+        },
+        "hybrid": {
+          "tp": 2201,
+          "fp": 0,
+          "tn": 56,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "specificity": 1.0
+        }
+      }
+    },
+    {
+      "scenario": "scenario_4_brute_force",
+      "flows": 90,
+      "benign_flows": 60,
+      "attack_flows": 30,
+      "alerts": 2,
+      "alert_precision": 1.0,
+      "layers": {
+        "signature": {
+          "tp": 30,
+          "fp": 0,
+          "tn": 60,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "specificity": 1.0
+        },
+        "ml": {
+          "tp": 12,
+          "fp": 0,
+          "tn": 60,
+          "fn": 18,
+          "precision": 1.0,
+          "recall": 0.4,
+          "f1": 0.5714,
+          "accuracy": 0.8,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.6,
+          "specificity": 1.0
+        },
+        "hybrid": {
+          "tp": 30,
+          "fp": 0,
+          "tn": 60,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "specificity": 1.0
+        }
+      }
+    },
+    {
+      "scenario": "scenario_5_ambiguous",
+      "flows": 130,
+      "benign_flows": 105,
+      "attack_flows": 25,
+      "alerts": 2,
+      "alert_precision": 0.5,
+      "layers": {
+        "signature": {
+          "tp": 0,
+          "fp": 40,
+          "tn": 65,
+          "fn": 25,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.5,
+          "false_positive_rate": 0.381,
+          "false_negative_rate": 1.0,
+          "specificity": 0.619
+        },
+        "ml": {
+          "tp": 25,
+          "fp": 41,
+          "tn": 64,
+          "fn": 0,
+          "precision": 0.3788,
+          "recall": 1.0,
+          "f1": 0.5495,
+          "accuracy": 0.6846,
+          "false_positive_rate": 0.3905,
+          "false_negative_rate": 0.0,
+          "specificity": 0.6095
+        },
+        "hybrid": {
+          "tp": 25,
+          "fp": 40,
+          "tn": 65,
+          "fn": 0,
+          "precision": 0.3846,
+          "recall": 1.0,
+          "f1": 0.5556,
+          "accuracy": 0.6923,
+          "false_positive_rate": 0.381,
+          "false_negative_rate": 0.0,
+          "specificity": 0.619
+        }
+      }
+    },
+    {
+      "scenario": "scenario_6_mitm_arp",
+      "flows": 53,
+      "benign_flows": 52,
+      "attack_flows": 1,
+      "alerts": 2,
+      "alert_precision": 1.0,
+      "layers": {
+        "signature": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 52,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.9811,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0,
+          "specificity": 1.0
+        },
+        "ml": {
+          "tp": 1,
+          "fp": 0,
+          "tn": 52,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 0.0,
+          "specificity": 1.0
+        },
+        "hybrid": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 52,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.9811,
+          "false_positive_rate": 0.0,
+          "false_negative_rate": 1.0,
+          "specificity": 1.0
+        }
+      }
+    }
+  ],
+  "per_attack_class": {
+    "port_scan": {
+      "flows": 197,
+      "signature": {
+        "detected": 172,
+        "recall": 0.8731
+      },
+      "ml": {
+        "detected": 197,
+        "recall": 1.0
+      },
+      "hybrid": {
+        "detected": 197,
+        "recall": 1.0
+      }
+    },
+    "dos": {
+      "flows": 2201,
+      "signature": {
+        "detected": 2201,
+        "recall": 1.0
+      },
+      "ml": {
+        "detected": 2201,
+        "recall": 1.0
+      },
+      "hybrid": {
+        "detected": 2201,
+        "recall": 1.0
+      }
+    },
+    "brute_force": {
+      "flows": 30,
+      "signature": {
+        "detected": 30,
+        "recall": 1.0
+      },
+      "ml": {
+        "detected": 12,
+        "recall": 0.4
+      },
+      "hybrid": {
+        "detected": 30,
+        "recall": 1.0
+      }
+    },
+    "mitm": {
+      "flows": 1,
+      "signature": {
+        "detected": 0,
+        "recall": 0.0
+      },
+      "ml": {
+        "detected": 1,
+        "recall": 1.0
+      },
+      "hybrid": {
+        "detected": 0,
+        "recall": 0.0
+      }
+    }
+  },
+  "alert_summary": {
+    "total": 12,
+    "true_positive": 11,
+    "false_positive": 1,
+    "alert_precision": 0.9167,
+    "by_severity": {
+      "CRITICAL": 9,
+      "HIGH": 2,
+      "MEDIUM": 1
+    },
+    "by_category": {
+      "port_scan": 5,
+      "dos": 3,
+      "brute_force": 2,
+      "mitm": 2
+    }
+  },
+  "mitm_event_level": {
+    "alerts": 2,
+    "detected": true,
+    "rule_ids": [
+      "R-007"
+    ],
+    "true_positives": 2,
+    "note": "ARP cache poisoning is a layer-2 control-plane attack: it produces no TCP/IP flow of its own, so it is scored at the event level rather than through the flow-level confusion matrix. The one 'mitm' flow label is the victim's redirected HTTP conversation, which is indistinguishable from ordinary traffic once ARP has been poisoned."
+  },
+  "examples": {
+    "false_positives": [
+      {
+        "scenario": "scenario_5_ambiguous",
+        "src_ip": "10.0.0.200",
+        "dst_ip": "10.0.0.10",
+        "dst_port": 1,
+        "proto": "TCP",
+        "total_packets": 1,
+        "duration": 0.0,
+        "ground_truth": "benign",
+        "alert_id": "A-0001",
+        "severity": "CRITICAL",
+        "if_score": 0.774,
+        "rf_attack_prob": 0.998,
+        "note": "benign flow flagged"
+      },
+      {
+        "scenario": "scenario_5_ambiguous",
+        "src_ip": "10.0.0.200",
+        "dst_ip": "10.0.0.10",
+        "dst_port": 2,
+        "proto": "TCP",
+        "total_packets": 1,
+        "duration": 0.0,
+        "ground_truth": "benign",
+        "alert_id": "A-0001",
+        "severity": "CRITICAL",
+        "if_score": 0.774,
+        "rf_attack_prob": 0.998,
+        "note": "benign flow flagged"
+      },
+      {
+        "scenario": "scenario_5_ambiguous",
+        "src_ip": "10.0.0.200",
+        "dst_ip": "10.0.0.10",
+        "dst_port": 3,
+        "proto": "TCP",
+        "total_packets": 1,
+        "duration": 0.0,
+        "ground_truth": "benign",
+        "alert_id": "A-0001",
+        "severity": "CRITICAL",
+        "if_score": 0.774,
+        "rf_attack_prob": 0.998,
+        "note": "benign flow flagged"
+      },
+      {
+        "scenario": "scenario_5_ambiguous",
+        "src_ip": "10.0.0.200",
+        "dst_ip": "10.0.0.10",
+        "dst_port": 4,
+        "proto": "TCP",
+        "total_packets": 1,
+        "duration": 0.0,
+        "ground_truth": "benign",
+        "alert_id": "A-0001",
+        "severity": "CRITICAL",
+        "if_score": 0.774,
+        "rf_attack_prob": 0.998,
+        "note": "benign flow flagged"
+      },
+      {
+        "scenario": "scenario_5_ambiguous",
+        "src_ip": "10.0.0.200",
+        "dst_ip": "10.0.0.10",
+        "dst_port": 5,
+        "proto": "TCP",
+        "total_packets": 1,
+        "duration": 0.0,
+        "ground_truth": "benign",
+        "alert_id": "A-0001",
+        "severity": "CRITICAL",
+        "if_score": 0.774,
+        "rf_attack_prob": 0.998,
+        "note": "benign flow flagged"
+      }
+    ],
+    "false_negatives": [
+      {
+        "scenario": "scenario_6_mitm_arp",
+        "src_ip": "10.0.0.21",
+        "dst_ip": "93.184.216.34",
+        "dst_port": 80,
+        "proto": "TCP",
+        "total_packets": 4,
+        "duration": 0.022,
+        "ground_truth": "mitm",
+        "alert_id": "",
+        "severity": "",
+        "if_score": 0.735,
+        "rf_attack_prob": 0.535,
+        "note": "attack flow missed"
+      }
+    ],
+    "false_positive_flows": 40,
+    "false_negative_flows": 1
+  },
+  "label_definitions": {
+    "benign": "Normal user / application traffic",
+    "port_scan": "Reconnaissance: TCP SYN / NULL / horizontal port scanning",
+    "dos": "Denial of service: SYN, UDP or ICMP flooding",
+    "brute_force": "Credential brute force against SSH / RDP",
+    "mitm": "Man-in-the-middle via ARP cache poisoning"
+  },
+  "confusion_matrices": {
+    "scenario_1_benign": {
+      "signature": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 71,
+        "fn": 0
+      },
+      "ml": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 71,
+        "fn": 0
+      },
+      "hybrid": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 71,
+        "fn": 0
+      }
+    },
+    "scenario_2_port_scan": {
+      "signature": {
+        "tp": 172,
+        "fp": 0,
+        "tn": 71,
+        "fn": 0
+      },
+      "ml": {
+        "tp": 172,
+        "fp": 0,
+        "tn": 71,
+        "fn": 0
+      },
+      "hybrid": {
+        "tp": 172,
+        "fp": 0,
+        "tn": 71,
+        "fn": 0
+      }
+    },
+    "scenario_3_dos": {
+      "signature": {
+        "tp": 2201,
+        "fp": 0,
+        "tn": 56,
+        "fn": 0
+      },
+      "ml": {
+        "tp": 2201,
+        "fp": 0,
+        "tn": 56,
+        "fn": 0
+      },
+      "hybrid": {
+        "tp": 2201,
+        "fp": 0,
+        "tn": 56,
+        "fn": 0
+      }
+    },
+    "scenario_4_brute_force": {
+      "signature": {
+        "tp": 30,
+        "fp": 0,
+        "tn": 60,
+        "fn": 0
+      },
+      "ml": {
+        "tp": 12,
+        "fp": 0,
+        "tn": 60,
+        "fn": 18
+      },
+      "hybrid": {
+        "tp": 30,
+        "fp": 0,
+        "tn": 60,
+        "fn": 0
+      }
+    },
+    "scenario_5_ambiguous": {
+      "signature": {
+        "tp": 0,
+        "fp": 40,
+        "tn": 65,
+        "fn": 25
+      },
+      "ml": {
+        "tp": 25,
+        "fp": 41,
+        "tn": 64,
+        "fn": 0
+      },
+      "hybrid": {
+        "tp": 25,
+        "fp": 40,
+        "tn": 65,
+        "fn": 0
+      }
+    },
+    "scenario_6_mitm_arp": {
+      "signature": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 52,
+        "fn": 1
+      },
+      "ml": {
+        "tp": 1,
+        "fp": 0,
+        "tn": 52,
+        "fn": 0
+      },
+      "hybrid": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 52,
+        "fn": 1
+      }
+    }
+  }
+}

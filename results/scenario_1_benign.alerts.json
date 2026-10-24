@@ -1,0 +1,12 @@
+{
+  "scenario": "scenario_1_benign",
+  "pcap": "C:\\Users\\mehwaz\\OneDrive\\Documents\\Default Project\\megaminds-ids\\data\\pcaps\\scenario_1_benign.pcap",
+  "generated_at": "2026-10-24T17:20:01+00:00",
+  "summary": {
+    "alerts": 0,
+    "flows": 71,
+    "by_severity": {},
+    "by_category": {}
+  },
+  "alerts": []
+}

@@ -1,0 +1,4 @@
+alert_id,time_utc,category,severity,confidence,rule_id,rule_name,src_ip,dst_ip,dst_port,proto,flow_count,layers,ml_if,ml_rf,ground_truth
+A-0001,2025-01-01 00:00:25,dos,CRITICAL,0.93,R-003,SYN_FLOOD_FANIN,10.0.0.178,10.0.0.10,80,TCP,1800,signature+ml,0.744,1.0,dos
+A-0002,2025-01-01 00:00:55,dos,CRITICAL,0.825,R-004,UDP_FLOOD,10.0.0.66,10.0.0.10,53,UDP,400,signature+ml,0.73,0.802,dos
+A-0003,2025-01-01 00:01:15,dos,CRITICAL,0.92,R-005,ICMP_FLOOD,10.0.0.67,10.0.0.10,0,ICMP,1,signature+ml,0.711,0.815,dos

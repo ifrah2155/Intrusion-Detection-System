@@ -1,0 +1,237 @@
+{
+  "scenario": "scenario_4_brute_force",
+  "pcap": "C:\\Users\\mehwaz\\OneDrive\\Documents\\Default Project\\megaminds-ids\\data\\pcaps\\scenario_4_brute_force.pcap",
+  "generated_at": "2026-10-24T17:16:27+00:00",
+  "summary": {
+    "alerts": 2,
+    "flows": 90,
+    "by_severity": {
+      "CRITICAL": 1,
+      "HIGH": 1
+    },
+    "by_category": {
+      "brute_force": 2
+    }
+  },
+  "alerts": [
+    {
+      "alert_id": "A-0001",
+      "timestamp": 1735689650.0,
+      "time_utc": "2025-01-01 00:00:50",
+      "scenario": "scenario_4_brute_force",
+      "category": "brute_force",
+      "severity": "CRITICAL",
+      "confidence": 0.865,
+      "rule_id": "R-006",
+      "rule_name": "CREDENTIAL_BRUTE_FORCE",
+      "entity": "10.0.0.67",
+      "entity_kind": "source",
+      "src_ip": "10.0.0.67",
+      "dst_ip": "10.0.0.10",
+      "src_port": 48283,
+      "dst_port": 3389,
+      "proto": "TCP",
+      "flow_count": 12,
+      "flow_keys": [
+        "6|10.0.0.10:3389|10.0.0.67:48283",
+        "6|10.0.0.10:3389|10.0.0.67:56531",
+        "6|10.0.0.10:3389|10.0.0.67:51002",
+        "6|10.0.0.10:3389|10.0.0.67:43449",
+        "6|10.0.0.10:3389|10.0.0.67:49753",
+        "6|10.0.0.10:3389|10.0.0.67:50968",
+        "6|10.0.0.10:3389|10.0.0.67:58467",
+        "6|10.0.0.10:3389|10.0.0.67:36244",
+        "6|10.0.0.10:3389|10.0.0.67:51127",
+        "6|10.0.0.10:3389|10.0.0.67:40910",
+        "6|10.0.0.10:3389|10.0.0.67:41842",
+        "6|10.0.0.10:3389|10.0.0.67:58073"
+      ],
+      "detection_layers": [
+        "signature",
+        "ml"
+      ],
+      "ml": {
+        "if_score": 0.716,
+        "rf_attack_prob": 1.0,
+        "agrees": true,
+        "note": "ML corroborates: Isolation Forest score 0.72, Random Forest attack probability 1.00.",
+        "top_features": [
+          {
+            "feature": "rst_cnt",
+            "label": "RST count",
+            "value": 1.0,
+            "benign_mean": 0.0,
+            "z_score": 50.0,
+            "direction": "elevated",
+            "importance": 0.0408,
+            "contribution": 204.23
+          },
+          {
+            "feature": "rst_ratio",
+            "label": "RST / total packets",
+            "value": 0.333,
+            "benign_mean": 0.0,
+            "z_score": 50.0,
+            "direction": "elevated",
+            "importance": 0.0314,
+            "contribution": 156.9
+          },
+          {
+            "feature": "src_ssh_attempts_win",
+            "label": "login-service attempts by source",
+            "value": 12.0,
+            "benign_mean": 0.185,
+            "z_score": 30.45,
+            "direction": "elevated",
+            "importance": 0.0344,
+            "contribution": 104.74
+          },
+          {
+            "feature": "src_flow_count_win",
+            "label": "flows from source in window",
+            "value": 12.0,
+            "benign_mean": 1.637,
+            "z_score": 15.95,
+            "direction": "elevated",
+            "importance": 0.0539,
+            "contribution": 85.9
+          },
+          {
+            "feature": "src_syn_ratio_win",
+            "label": "source SYN ratio in window",
+            "value": 0.667,
+            "benign_mean": 0.088,
+            "z_score": 11.09,
+            "direction": "elevated",
+            "importance": 0.051,
+            "contribution": 56.63
+          }
+        ]
+      },
+      "evidence": {
+        "observed_attempts": 12,
+        "threshold_attempts": 8,
+        "service_port": 3389,
+        "flow_duration": 0.09,
+        "packets_per_attempt": 3,
+        "flows_in_incident": 12,
+        "packets_in_incident": 36
+      },
+      "explanation": "10.0.0.67 opened 12 short-lived RDP sessions to 10.0.0.10:3389 within 10s (threshold 8). Each session lasted 0.09s. Repeated rapid connect/teardown cycles against an authentication service indicate an automated credential-guessing attack. The ML layer independently flagged these flows (anomaly score 0.72, attack probability 1.00), which raises confidence.",
+      "ground_truth": "brute_force",
+      "is_true_positive": true
+    },
+    {
+      "alert_id": "A-0002",
+      "timestamp": 1735689630.0,
+      "time_utc": "2025-01-01 00:00:30",
+      "scenario": "scenario_4_brute_force",
+      "category": "brute_force",
+      "severity": "HIGH",
+      "confidence": 0.754,
+      "rule_id": "R-006",
+      "rule_name": "CREDENTIAL_BRUTE_FORCE",
+      "entity": "10.0.0.66",
+      "entity_kind": "source",
+      "src_ip": "10.0.0.66",
+      "dst_ip": "10.0.0.10",
+      "src_port": 50023,
+      "dst_port": 22,
+      "proto": "TCP",
+      "flow_count": 18,
+      "flow_keys": [
+        "6|10.0.0.10:22|10.0.0.66:50023",
+        "6|10.0.0.10:22|10.0.0.66:37330",
+        "6|10.0.0.10:22|10.0.0.66:39151",
+        "6|10.0.0.10:22|10.0.0.66:39683",
+        "6|10.0.0.10:22|10.0.0.66:39740",
+        "6|10.0.0.10:22|10.0.0.66:40649",
+        "6|10.0.0.10:22|10.0.0.66:43450",
+        "6|10.0.0.10:22|10.0.0.66:46498",
+        "6|10.0.0.10:22|10.0.0.66:34763",
+        "6|10.0.0.10:22|10.0.0.66:44360",
+        "6|10.0.0.10:22|10.0.0.66:54475",
+        "6|10.0.0.10:22|10.0.0.66:49701",
+        "6|10.0.0.10:22|10.0.0.66:49206",
+        "6|10.0.0.10:22|10.0.0.66:37743",
+        "6|10.0.0.10:22|10.0.0.66:33380",
+        "6|10.0.0.10:22|10.0.0.66:58212",
+        "6|10.0.0.10:22|10.0.0.66:32896",
+        "6|10.0.0.10:22|10.0.0.66:37676"
+      ],
+      "detection_layers": [
+        "signature"
+      ],
+      "ml": {
+        "if_score": 0.729,
+        "rf_attack_prob": 0.4,
+        "agrees": false,
+        "note": "ML did not corroborate (Isolation Forest 0.73, Random Forest 0.40); alert rests on the deterministic rule alone.",
+        "top_features": [
+          {
+            "feature": "rst_cnt",
+            "label": "RST count",
+            "value": 1.0,
+            "benign_mean": 0.0,
+            "z_score": 50.0,
+            "direction": "elevated",
+            "importance": 0.0408,
+            "contribution": 204.23
+          },
+          {
+            "feature": "src_ssh_attempts_win",
+            "label": "login-service attempts by source",
+            "value": 18.0,
+            "benign_mean": 0.185,
+            "z_score": 45.91,
+            "direction": "elevated",
+            "importance": 0.0344,
+            "contribution": 157.93
+          },
+          {
+            "feature": "rst_ratio",
+            "label": "RST / total packets",
+            "value": 0.167,
+            "benign_mean": 0.0,
+            "z_score": 50.0,
+            "direction": "elevated",
+            "importance": 0.0314,
+            "contribution": 156.9
+          },
+          {
+            "feature": "src_flow_count_win",
+            "label": "flows from source in window",
+            "value": 18.0,
+            "benign_mean": 1.637,
+            "z_score": 25.18,
+            "direction": "elevated",
+            "importance": 0.0539,
+            "contribution": 135.64
+          },
+          {
+            "feature": "src_syn_ratio_win",
+            "label": "source SYN ratio in window",
+            "value": 0.333,
+            "benign_mean": 0.088,
+            "z_score": 4.7,
+            "direction": "elevated",
+            "importance": 0.051,
+            "contribution": 24.0
+          }
+        ]
+      },
+      "evidence": {
+        "observed_attempts": 18,
+        "threshold_attempts": 8,
+        "service_port": 22,
+        "flow_duration": 0.14,
+        "packets_per_attempt": 6,
+        "flows_in_incident": 18,
+        "packets_in_incident": 108
+      },
+      "explanation": "10.0.0.66 opened 18 short-lived SSH sessions to 10.0.0.10:22 within 10s (threshold 8). Each session lasted 0.14s. Repeated rapid connect/teardown cycles against an authentication service indicate an automated credential-guessing attack.",
+      "ground_truth": "brute_force",
+      "is_true_positive": true
+    }
+  ]
+}

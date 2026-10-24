@@ -1,0 +1,67 @@
+{
+  "scenario_1_benign": {
+    "description": "Normal traffic baseline (no attacks)",
+    "pcap": "C:\\Users\\mehwaz\\OneDrive\\Documents\\Default Project\\megaminds-ids\\data\\pcaps\\scenario_1_benign.pcap",
+    "labels": "C:\\Users\\mehwaz\\OneDrive\\Documents\\Default Project\\megaminds-ids\\data\\labels\\scenario_1_benign.csv",
+    "packets": 940,
+    "flows": 71,
+    "label_counts": {
+      "benign": 71
+    }
+  },
+  "scenario_2_port_scan": {
+    "description": "Reconnaissance: vertical + horizontal + NULL scans",
+    "pcap": "C:\\Users\\mehwaz\\OneDrive\\Documents\\Default Project\\megaminds-ids\\data\\pcaps\\scenario_2_port_scan.pcap",
+    "labels": "C:\\Users\\mehwaz\\OneDrive\\Documents\\Default Project\\megaminds-ids\\data\\labels\\scenario_2_port_scan.csv",
+    "packets": 1132,
+    "flows": 243,
+    "label_counts": {
+      "benign": 71,
+      "port_scan": 172
+    }
+  },
+  "scenario_3_dos": {
+    "description": "Denial of service: SYN / UDP / ICMP floods",
+    "pcap": "C:\\Users\\mehwaz\\OneDrive\\Documents\\Default Project\\megaminds-ids\\data\\pcaps\\scenario_3_dos.pcap",
+    "labels": "C:\\Users\\mehwaz\\OneDrive\\Documents\\Default Project\\megaminds-ids\\data\\labels\\scenario_3_dos.csv",
+    "packets": 3228,
+    "flows": 2257,
+    "label_counts": {
+      "benign": 56,
+      "dos": 2201
+    }
+  },
+  "scenario_4_brute_force": {
+    "description": "SSH / RDP credential brute force",
+    "pcap": "C:\\Users\\mehwaz\\OneDrive\\Documents\\Default Project\\megaminds-ids\\data\\pcaps\\scenario_4_brute_force.pcap",
+    "labels": "C:\\Users\\mehwaz\\OneDrive\\Documents\\Default Project\\megaminds-ids\\data\\labels\\scenario_4_brute_force.csv",
+    "packets": 928,
+    "flows": 90,
+    "label_counts": {
+      "benign": 60,
+      "brute_force": 30
+    }
+  },
+  "scenario_5_ambiguous": {
+    "description": "Authorised scan, slow scan and bulk backup (hard cases)",
+    "pcap": "C:\\Users\\mehwaz\\OneDrive\\Documents\\Default Project\\megaminds-ids\\data\\pcaps\\scenario_5_ambiguous.pcap",
+    "labels": "C:\\Users\\mehwaz\\OneDrive\\Documents\\Default Project\\megaminds-ids\\data\\labels\\scenario_5_ambiguous.csv",
+    "packets": 2706,
+    "flows": 130,
+    "label_counts": {
+      "benign": 105,
+      "port_scan": 25
+    }
+  },
+  "scenario_6_mitm_arp": {
+    "description": "ARP cache poisoning / man-in-the-middle",
+    "pcap": "C:\\Users\\mehwaz\\OneDrive\\Documents\\Default Project\\megaminds-ids\\data\\pcaps\\scenario_6_mitm_arp.pcap",
+    "labels": "C:\\Users\\mehwaz\\OneDrive\\Documents\\Default Project\\megaminds-ids\\data\\labels\\scenario_6_mitm_arp.csv",
+    "packets": 842,
+    "flows": 53,
+    "label_counts": {
+      "benign": 52,
+      "mitm": 1
+    }
+  }
+}

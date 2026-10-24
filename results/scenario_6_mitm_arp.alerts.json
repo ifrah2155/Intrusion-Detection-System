@@ -1,0 +1,103 @@
+{
+  "scenario": "scenario_6_mitm_arp",
+  "pcap": "C:\\Users\\mehwaz\\OneDrive\\Documents\\Default Project\\megaminds-ids\\data\\pcaps\\scenario_6_mitm_arp.pcap",
+  "generated_at": "2026-10-24T17:16:28+00:00",
+  "summary": {
+    "alerts": 2,
+    "flows": 53,
+    "by_severity": {
+      "CRITICAL": 2
+    },
+    "by_category": {
+      "mitm": 2
+    }
+  },
+  "alerts": [
+    {
+      "alert_id": "A-0001",
+      "timestamp": 1735689615.0,
+      "time_utc": "2025-01-01 00:00:15",
+      "scenario": "scenario_6_mitm_arp",
+      "category": "mitm",
+      "severity": "CRITICAL",
+      "confidence": 0.95,
+      "rule_id": "R-007",
+      "rule_name": "ARP_CACHE_POISONING",
+      "entity": "10.0.0.1",
+      "entity_kind": "layer2",
+      "src_ip": "10.0.0.1",
+      "dst_ip": "10.0.0.1",
+      "src_port": 0,
+      "dst_port": 0,
+      "proto": "ARP",
+      "flow_count": 1,
+      "flow_keys": [],
+      "detection_layers": [
+        "signature"
+      ],
+      "ml": {
+        "if_score": 0.0,
+        "rf_attack_prob": 0.0,
+        "agrees": false,
+        "note": "",
+        "top_features": []
+      },
+      "evidence": {
+        "ip": "10.0.0.1",
+        "mac_count": 2,
+        "macs": {
+          "00:11:22:33:44:01": 5,
+          "aa:bb:cc:dd:ee:ff": 84
+        },
+        "original_mac": "00:11:22:33:44:01",
+        "suspect_mac": "aa:bb:cc:dd:ee:ff"
+      },
+      "explanation": "IP 10.0.0.1 was announced by 2 different MAC addresses (00:11:22:33:44:01, aa:bb:cc:dd:ee:ff); the most recent claim came from aa:bb:cc:dd:ee:ff while it was previously bound to 00:11:22:33:44:01. This is the signature of ARP cache poisoning used to position an attacker for man-in-the-middle interception.",
+      "ground_truth": "mitm",
+      "is_true_positive": true
+    },
+    {
+      "alert_id": "A-0002",
+      "timestamp": 1735689640.0,
+      "time_utc": "2025-01-01 00:00:40",
+      "scenario": "scenario_6_mitm_arp",
+      "category": "mitm",
+      "severity": "CRITICAL",
+      "confidence": 0.95,
+      "rule_id": "R-007",
+      "rule_name": "ARP_CACHE_POISONING",
+      "entity": "10.0.0.10",
+      "entity_kind": "layer2",
+      "src_ip": "10.0.0.10",
+      "dst_ip": "10.0.0.10",
+      "src_port": 0,
+      "dst_port": 0,
+      "proto": "ARP",
+      "flow_count": 1,
+      "flow_keys": [],
+      "detection_layers": [
+        "signature"
+      ],
+      "ml": {
+        "if_score": 0.0,
+        "rf_attack_prob": 0.0,
+        "agrees": false,
+        "note": "",
+        "top_features": []
+      },
+      "evidence": {
+        "ip": "10.0.0.10",
+        "mac_count": 2,
+        "macs": {
+          "02:00:0a:00:00:0a": 1,
+          "aa:bb:cc:dd:ee:ff": 56
+        },
+        "original_mac": "02:00:0a:00:00:0a",
+        "suspect_mac": "aa:bb:cc:dd:ee:ff"
+      },
+      "explanation": "IP 10.0.0.10 was announced by 2 different MAC addresses (02:00:0a:00:00:0a, aa:bb:cc:dd:ee:ff); the most recent claim came from aa:bb:cc:dd:ee:ff while it was previously bound to 02:00:0a:00:00:0a. This is the signature of ARP cache poisoning used to position an attacker for man-in-the-middle interception.",
+      "ground_truth": "mitm",
+      "is_true_positive": true
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+alert_id,time_utc,category,severity,confidence,src_ip,dst_ip,rule_name,flow_count,detection_layers,ground_truth
