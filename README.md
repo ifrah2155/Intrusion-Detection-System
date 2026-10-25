@@ -37,10 +37,7 @@ Evaluated on 2,844 labelled flows across six captures:
   is the concrete reason for combining the two approaches.
 
 Full numbers, confusion matrices and failure analysis: [`results/evaluation.json`](results/evaluation.json)
-and [`docs/REPORT.pdf`](docs/REPORT.pdf) (7-page technical report, 1,898 words).
-
-New to the project? [`docs/RUNBOOK.md`](docs/RUNBOOK.md) walks every command
-with the exact output you should expect.
+and [`docs/REPORT.md`](docs/REPORT.md) (7-page technical report, 1,898 words).
 
 ---
 
