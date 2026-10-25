@@ -226,10 +226,7 @@ megaminds-ids/
 │   └── wordcount.py          # report length check (1,500-2,000 words)
 └── docs/
     ├── REPORT.md             # technical report (source)
-    ├── REPORT.pdf            # technical report (typeset, 7 pages)
-    ├── RUNBOOK.md            # exact step-by-step commands + expected output
-    ├── VIDEO_DEMO_GUIDE.md   # shot-by-shot recording script
-    └── VIDEO_SCRIPT.md       # spoken narration for the video
+ 
 ```
 
 ---
